@@ -1,6 +1,9 @@
+package ico.fes;
+
 public class Persona{
 
-	private String nombre; // Atributos de clase
+	// Atributos de clase
+	private String nombre;
 	private String apPaterno;
 	private String apMaterno;
 	private int edad;
@@ -24,6 +27,14 @@ public class Persona{
 
 	public void setNombre(String n){
 		this.nombre = n;
+	}
+
+	public int getEdad(){
+		return this.edad;
+	}
+
+	public void setEdad(int edad){
+		this.edad = edad;
 	}
 
 }

@@ -1,3 +1,5 @@
+import ico.fes.Persona;
+
 public class UsarPersona{
 	public static void main(String[] args){
 
