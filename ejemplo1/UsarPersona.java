@@ -13,7 +13,7 @@ public class UsarPersona{
 		p2.setNombre("Ivan");
 		System.out.println(p2.getNombre());
 
-		System.out.println("Hola " + p2.getNombre());
+		System.out.println("Hola " + p2.getNombre() + " bienvenido");
 
 	}
 }
