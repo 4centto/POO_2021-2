@@ -1,5 +1,7 @@
 package mx.unam.aragon.fes.gui;
 
+import mx.unam.aragon.fes.Empleado;
+
 public class AltaEmpleado extends javax.swing.JFrame {
 
     public AltaEmpleado() {
@@ -7,6 +9,8 @@ public class AltaEmpleado extends javax.swing.JFrame {
         
         setLocationRelativeTo(null);
         setTitle("REGISTRO DE EMPLEADOS");
+        
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -50,6 +54,8 @@ public class AltaEmpleado extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -342,6 +348,16 @@ public class AltaEmpleado extends javax.swing.JFrame {
 
         jButton4.setText("<<");
 
+        jButton5.setText("NUEVO REGISTRO");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
+
+        jButton6.setText("ENVIAR");
+        jButton6.setEnabled(false);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -351,7 +367,10 @@ public class AltaEmpleado extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTabbedPane1)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton4)
                         .addGap(18, 18, 18)
                         .addComponent(jButton3)
@@ -370,7 +389,9 @@ public class AltaEmpleado extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButton3)
-                        .addComponent(jButton4))
+                        .addComponent(jButton4)
+                        .addComponent(jButton5)
+                        .addComponent(jButton6))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButton2)
                         .addComponent(jButton1)))
@@ -380,6 +401,40 @@ public class AltaEmpleado extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        System.out.println("Nuevo Empleado");
+        
+        this.LimpiarFormulario();
+        
+        Empleado emp = new Empleado();
+        
+        emp.setNombre(this.jTextField1.getText());
+        emp.setApPaterno(this.jTextField2.getText());
+        emp.setApMaterno(this.jTextField3.getText());
+        emp.setEdad(Integer.parseInt(this.jTextField4.getText()));
+        emp.setCurp(this.jTextField5.getText());
+        emp.getDomicilio().setCalle(this.jTextField6.getText());
+        
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void LimpiarFormulario(){
+        this.jTextField1.setText("");
+        this.jTextField2.setText("");
+        this.jTextField3.setText("");
+        this.jTextField4.setText("");
+        this.jTextField5.setText("");
+        this.jTextField6.setText("");
+        this.jTextField7.setText("");
+        this.jTextField8.setText("");
+        this.jTextField9.setText("");
+        this.jTextField10.setText("");
+        this.jTextField11.setText("");
+        this.jTextField12.setText("");
+        this.jTextField13.setText("");
+        this.jTextField14.setText("");
+        this.jTextField15.setText("");
+    }
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -417,6 +472,8 @@ public class AltaEmpleado extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
