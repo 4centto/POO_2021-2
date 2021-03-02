@@ -1,5 +1,6 @@
 package mx.unam.aragon.fes.gui;
 
+import javax.swing.JOptionPane;
 import mx.unam.aragon.fes.Empleado;
 
 public class AltaEmpleado extends javax.swing.JFrame {
@@ -414,6 +415,16 @@ public class AltaEmpleado extends javax.swing.JFrame {
         emp.setEdad(Integer.parseInt(this.jTextField4.getText()));
         emp.setCurp(this.jTextField5.getText());
         emp.getDomicilio().setCalle(this.jTextField6.getText());
+        emp.getDomicilio().setNumero(this.jTextField7.getText());
+        emp.getDomicilio().setColonia(this.jTextField8.getText());
+        emp.getDomicilio().setDelegacion(this.jTextField9.getText());
+        emp.getDomicilio().setEstado(this.jTextField10.getText());
+        emp.getDomicilio().setCp(this.jTextField11.getText());
+        emp.setNumeroEmpleado(Integer.parseInt(jTextField12.getText()));
+        emp.setDepartamento(this.jTextField13.getText());
+        emp.setSueldo(Float.parseFloat(this.jTextField14.getText()));
+        emp.setHorasExtra(Integer.parseInt(this.jTextField15.getText()));
+        int confirmar = JOptionPane.showConfirmDialog(null, "¿Deseas guardar estos datos?");
         
     }//GEN-LAST:event_jButton5MouseClicked
 
