@@ -6,9 +6,11 @@
 package mx.unam.aragon.fes.gui;
 
 import java.util.ArrayList;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import mx.unam.aragon.fes.Direccion;
 import mx.unam.aragon.fes.Empleado;
+import mx.unam.aragon.fes.persistencia.ArchivoEmpleado;
 
 
 
@@ -302,6 +304,11 @@ public class AltaEmpleado extends javax.swing.JFrame {
         jTabbedPane1.addTab("Empresariales", jPanel2);
 
         jButton1.setText("Guardar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Cargar");
 
@@ -378,7 +385,7 @@ public class AltaEmpleado extends javax.swing.JFrame {
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
         // TODO add your handling code here:
                 
-         Empleado emp= new Empleado();
+        Empleado emp= new Empleado();
         emp.setNombre( this.jTextField1.getText() );
         emp.setApPaterno(this.jTextField2.getText() );
         emp.setApMaterno( jTextField3.getText() );
@@ -399,16 +406,37 @@ public class AltaEmpleado extends javax.swing.JFrame {
         //Subirlo a memoria
         System.out.println("Boton: "+ confirmar);
         if (confirmar == 0){
-             lista.add(emp);
-    }else{
+            lista.add(emp);
+        }else{
             JOptionPane.showMessageDialog(this, "No se guardó el empleado.");
-            }
+        }
+        
         System.out.println("Empleados en el ARREGLO = "+ lista.size());
+        
         limpiarFormulario();
+        
         jButton6.setEnabled(false);
         
         
     }//GEN-LAST:event_jButton6MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        ArchivoEmpleado ae = new ArchivoEmpleado();
+        JFileChooser jfc = new JFileChooser();
+        
+        jfc.showSaveDialog(this);
+        String archivo = jfc.getSelectedFile().getAbsolutePath();
+        System.out.println("La ruta seleccionada es: " + archivo);
+        
+        ae.setArchivo(archivo);
+        try {
+            ae.guardarEmpleados(lista);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
      
     private void limpiarFormulario(){
@@ -429,10 +457,6 @@ public class AltaEmpleado extends javax.swing.JFrame {
       this.jTextField13.setText("0.0");
       this.jTextField14.setText("0");
       this.jTextField15.setText("");
-      
-      
-      
-      
     }
     
     /**
