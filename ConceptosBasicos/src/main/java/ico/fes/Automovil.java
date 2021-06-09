@@ -6,7 +6,7 @@ import java.awt.Color;
 public class Automovil {
     private String marca;
     private String sub_marca;
-    private int modelo;
+    public int modelo;
     private Color color;
 
     public Automovil() {
@@ -40,7 +40,11 @@ public class Automovil {
     }
 
     public void setModelo(int modelo) {
-        this.modelo = modelo;
+        if(modelo < 2022){
+            this.modelo = modelo;
+        } else {
+            System.out.println("Año/Modelo fuera del rango");
+        }
     }
 
     public Color getColor() {

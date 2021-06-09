@@ -11,6 +11,7 @@ public class ConceptosBasicos {
         miBocho.setMarca("Vlokswagen");
         miBocho.setSub_marca("Sedan");
         miBocho.setModelo(1980);
+        //miBocho.modelo = 1980; // En peligro la integridad de la logica
         miBocho.setColor(Color.BLUE);
         System.out.println(miBocho);
         
@@ -28,6 +29,10 @@ public class ConceptosBasicos {
         miMustang.setModelo(1990);
         miMustang.setColor(Color.YELLOW);
         System.out.println(miMustang);
+        
+        // int, double, char, float, byte
+        // Todas las clases del lenguaje: String, float, Color, Security
+        
         
     }
 }
