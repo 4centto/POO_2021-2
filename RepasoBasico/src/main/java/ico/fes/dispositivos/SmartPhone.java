@@ -5,7 +5,7 @@ public class SmartPhone {
     private String marca;
     private String color;
     private String modelo;
-    private float tamanio;
+    public float tamanio;
 
     public SmartPhone() {
     }
@@ -43,14 +43,6 @@ public class SmartPhone {
 
     public void setModelo(String modelo) {
         this.modelo = modelo;
-    }
-
-    public float getTamanio() {
-        return tamanio;
-    }
-
-    public void setTamanio(float tamanio) {
-        this.tamanio = tamanio;
     }
 
     @Override
