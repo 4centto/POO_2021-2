@@ -55,7 +55,14 @@ public class SmartPhone {
         return true;
     }
     
-    public int llamar(int numero){
+    /**
+     * El metodo llamar simula el funcionamiento del programa del telefono en un
+     * smartphone, esto gracias a la posibilidad de la abstracción.
+     * @param numero numero a llamar.
+     * @return int que representa el numero de minutos que duro la llamada.
+     */
+    
+    public int llamar(int numero, int sjikfh){
         System.out.println("Llamando al numero: " + numero);
         return 60;
     }
