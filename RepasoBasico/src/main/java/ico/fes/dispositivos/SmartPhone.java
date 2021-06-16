@@ -62,7 +62,7 @@ public class SmartPhone {
      * @return int que representa el numero de minutos que duro la llamada.
      */
     
-    public int llamar(int numero, int sjikfh){
+    public int llamar(int numero){
         System.out.println("Llamando al numero: " + numero);
         return 60;
     }

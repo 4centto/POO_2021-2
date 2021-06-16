@@ -386,8 +386,6 @@ public class AltaEmpleado extends javax.swing.JFrame {
         this.limpiarFormulario();
         this.jButton6.setEnabled(true); 
         
-       
-        
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
