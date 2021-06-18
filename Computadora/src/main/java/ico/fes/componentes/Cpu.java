@@ -18,6 +18,12 @@ public class Cpu {
     public Cpu() {
     }
 
+    public Cpu(String marca, String modelo, int velocidadProcesador) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.velocidadProcesador = velocidadProcesador;
+    }
+
     public String getMarca() {
         return marca;
     }

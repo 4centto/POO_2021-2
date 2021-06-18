@@ -19,6 +19,13 @@ public class Teclado {
     public Teclado() {
     }
 
+    public Teclado(String marca, String modelo, int numeroDeTeclas, int multimedia) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.numeroDeTeclas = numeroDeTeclas;
+        this.multimedia = multimedia;
+    }
+
     public String getMarca() {
         return marca;
     }

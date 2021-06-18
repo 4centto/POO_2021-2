@@ -20,6 +20,12 @@ public class Monitor {
         
     }
 
+    public Monitor(String marca, String modelo, int pulgadas) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.pulgadas = pulgadas;
+    }
+
     public String getMarca() {
         return marca;
     }

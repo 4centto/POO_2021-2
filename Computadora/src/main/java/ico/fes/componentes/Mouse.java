@@ -18,6 +18,12 @@ public class Mouse {
     public Mouse() {
     }
 
+    public Mouse(String marca, String modelo, String tipo) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.tipo = tipo;
+    }
+
     public String getMarca() {
         return marca;
     }
