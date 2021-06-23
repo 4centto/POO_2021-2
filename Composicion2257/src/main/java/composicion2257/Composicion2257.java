@@ -5,6 +5,7 @@ import ico.fes.objetos.Puerta;
 import ico.fes.objetos.Ventana;
 import ico.fes.partes.Habitacion;
 import ico.fes.partes.Muro;
+import ico.fes.partes.PuertaDeSeguridad;
 import java.awt.Color;
 
 public class Composicion2257 {
@@ -101,5 +102,12 @@ public class Composicion2257 {
             System.out.println(" ******************* ");
             
         }
+        
+        //Creacion de una puerta de seguridad
+        PuertaDeSeguridad ps = new PuertaDeSeguridad("12345", "Electronico", "Acero", Color.black, false);
+        System.out.println(ps);
+        
+        ps.verificar("12345");
+        
     }
 }
