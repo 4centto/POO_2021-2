@@ -57,5 +57,12 @@ public class PuertaDeSeguridad extends Puerta{
             return false;
         }
     }
+
+    @Override
+    public void abrir() {
+        System.out.println("Abriendo puerta... (Herencia)");
+    }
+    
+    
     
 }
